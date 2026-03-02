@@ -9,8 +9,5 @@ namespace Spryker\Zed\OmsMultiThread\Business\OmsProcessor;
 
 interface OmsProcessorIdGeneratorInterface
 {
-    /**
-     * @return int
-     */
     public function generateOmsProcessorIdentifier(): int;
 }

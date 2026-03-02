@@ -30,9 +30,6 @@ class OmsMultiThreadFacadeTest extends Unit
      */
     protected $tester;
 
-    /**
-     * @return void
-     */
     public function testCanExpandSalesOrderEntityTransferWithOmsProcessorId(): void
     {
         // Arrange

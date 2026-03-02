@@ -16,17 +16,11 @@ class OmsProcessorIdGenerator implements OmsProcessorIdGeneratorInterface
      */
     protected $config;
 
-    /**
-     * @param \Spryker\Zed\OmsMultiThread\OmsMultiThreadConfig $config
-     */
     public function __construct(OmsMultiThreadConfig $config)
     {
         $this->config = $config;
     }
 
-    /**
-     * @return int
-     */
     public function generateOmsProcessorIdentifier(): int
     {
         return rand(1, $this->config->getNumberOfOmsProcessWorkers());

@@ -18,17 +18,11 @@ use Spryker\Zed\OmsMultiThread\Business\OrderExpander\OrderExpanderInterface;
  */
 class OmsMultiThreadBusinessFactory extends AbstractBusinessFactory
 {
-    /**
-     * @return \Spryker\Zed\OmsMultiThread\Business\OmsProcessor\OmsProcessorIdGeneratorInterface
-     */
     public function createOmsProcessorIdGenerator(): OmsProcessorIdGeneratorInterface
     {
         return new OmsProcessorIdGenerator($this->getConfig());
     }
 
-    /**
-     * @return \Spryker\Zed\OmsMultiThread\Business\OrderExpander\OrderExpanderInterface
-     */
     public function createOrderExpander(): OrderExpanderInterface
     {
         return new OrderExpander($this->createOmsProcessorIdGenerator());

@@ -18,20 +18,11 @@ class OrderExpander implements OrderExpanderInterface
      */
     protected $omsProcessorIdGenerator;
 
-    /**
-     * @param \Spryker\Zed\OmsMultiThread\Business\OmsProcessor\OmsProcessorIdGeneratorInterface $omsProcessorIdGenerator
-     */
     public function __construct(OmsProcessorIdGeneratorInterface $omsProcessorIdGenerator)
     {
         $this->omsProcessorIdGenerator = $omsProcessorIdGenerator;
     }
 
-    /**
-     * @param \Generated\Shared\Transfer\SpySalesOrderEntityTransfer $salesOrderEntityTransfer
-     * @param \Generated\Shared\Transfer\QuoteTransfer $quoteTransfer
-     *
-     * @return \Generated\Shared\Transfer\SpySalesOrderEntityTransfer
-     */
     public function expandSalesOrderEntityTransferWithOmsProcessorIdentifier(
         SpySalesOrderEntityTransfer $salesOrderEntityTransfer,
         QuoteTransfer $quoteTransfer
